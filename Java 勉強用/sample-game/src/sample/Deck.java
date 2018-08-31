@@ -43,10 +43,14 @@ public class Deck {
 	}
 
 	public Card draw() {
-		int i = 0;
-		Card drawcard = cards.get(i);
-		i++;
+		Card drawcard = cards.get(0);
+		cards.remove(0);
 		return drawcard;
+	}
+
+	// デッキのシャッフル
+	public void shuffle() {
+		Collections.shuffle(cards);
 	}
 
 }
