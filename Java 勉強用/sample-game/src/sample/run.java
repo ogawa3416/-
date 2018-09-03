@@ -6,11 +6,15 @@ public class run {
 		Deck deck = new Deck();
 		// deck.printcards();
 
-		for (int i = 0; i < 30; i++) {
+		for (int i = 0; i < 10; i++) {
 			Card card = deck.draw();
-			outputNumber(card);
-			outputMark(card);
 
+			if (card == null) {
+				System.out.println("デッキにカードがありません");
+			} else {
+				outputNumber(card);
+				outputMark(card);
+			}
 		}
 	}
 

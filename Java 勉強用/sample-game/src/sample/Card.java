@@ -14,17 +14,34 @@ public class Card {
 		return (this.number == 14);
 	}
 
-	public String getNumber() {
-		String n = String.valueOf(number);
+	public static Card getJoker() {
+		Card joker = new Card(14, "ジョーカー");
+		return joker;
+	}
 
-		if (n.equals("11")) {
+	// public static Card getJoker() {
+	// Card joker = new Card(14, "ジョーカー");
+	// return joker;
+	// }
+
+	public String getNumber() {
+		String n;
+
+		switch (number) {
+		case 11:
 			n = "ジャック";
-		} else if (n.equals("12")) {
+			break;
+		case 12:
 			n = "クイーン";
-		} else if (n.equals("13")) {
+			break;
+		case 13:
 			n = "キング";
-		} else {
-			// 処理は何もしない
+			break;
+		case 14:
+			n = "ジョーカー";
+			break;
+		default:
+			n = String.valueOf(number);
 		}
 
 		return n;

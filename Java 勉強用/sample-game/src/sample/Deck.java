@@ -29,10 +29,10 @@ public class Deck {
 		}
 
 		// ジョーカーの追加
-		Card joker1 = new Card(14, "ジョーカー");
+		Card joker1 = Card.getJoker();
 		cards.add(joker1);
 
-		Card joker2 = new Card(14, "ジョーカー");
+		Card joker2 = Card.getJoker();
 		cards.add(joker2);
 
 		Collections.shuffle(cards);
@@ -43,14 +43,23 @@ public class Deck {
 	}
 
 	public Card draw() {
-		Card drawcard = cards.get(0);
-		cards.remove(0);
+		if (cards == null || cards.size() == 0) {
+			return null;
+		}
+
+		Card drawcard = cards.get(cards.size() - 1);
+		cards.remove(cards.size() - 1);
 		return drawcard;
 	}
 
 	// デッキのシャッフル
 	public void shuffle() {
 		Collections.shuffle(cards);
+	}
+
+	// デッキにカードを置く
+	public void put(Card card) {
+		cards.add(card);
 	}
 
 }
