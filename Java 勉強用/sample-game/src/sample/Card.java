@@ -47,6 +47,10 @@ public class Card {
 		return n;
 	}
 
+	public int getintNumber() {
+		return number;
+	}
+
 	public String getMark() {
 		return mark;
 	}

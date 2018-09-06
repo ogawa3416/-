@@ -6,16 +6,23 @@ public class run {
 		Deck deck = new Deck();
 		// deck.printcards();
 
-		for (int i = 0; i < 10; i++) {
-			Card card = deck.draw();
+		// for (int i = 0; i < 2; i++) {
+		// Card card = deck.draw();
 
-			if (card == null) {
-				System.out.println("デッキにカードがありません");
-			} else {
-				outputNumber(card);
-				outputMark(card);
-			}
-		}
+		// if (card == null) {
+		// System.out.println("デッキにカードがありません");
+		// } else {
+		// outputNumber(card);
+		// outputMark(card);
+		// }
+		// }
+
+		// スペードの8をデッキに置いてデッキからカードを1枚引く
+		// Card card = new Card(8, "スペード");
+		// deck.PutDraw(card);
+
+		deck.StrongCard();
+
 	}
 
 	// 出力処理(数字)
@@ -31,4 +38,5 @@ public class run {
 	public static void outputMark(Card card) {
 		System.out.println("そしてマークは" + card.getMark() + "です");
 	}
+
 }
