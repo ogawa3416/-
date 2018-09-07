@@ -64,14 +64,6 @@ public class Deck {
 		cards.add(card);
 	}
 
-	// デッキにカードを戻してから引く
-	public void PutDraw(Card card) {
-		put(card);
-		Card drawcard = draw();
-		run.outputNumber(drawcard);
-		run.outputMark(drawcard);
-	}
-
 	// カードを2枚引いて強いカードを表示
 	public void StrongCard() {
 		Card drawcard1 = draw();
@@ -79,6 +71,8 @@ public class Deck {
 
 		int cardnumber1 = drawcard1.getintNumber();
 		int cardnumber2 = drawcard2.getintNumber();
+		String cardmark1 = drawcard1.getMark();
+		String cardmark2 = drawcard2.getMark();
 
 		// 引いたカードの確認
 		run.outputNumber(drawcard1);
@@ -94,7 +88,22 @@ public class Deck {
 		} else if (Integer.compare(cardnumber1, cardnumber2) < 0) {
 			System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
 		} else {
-			// 数字が同じ場合の処理を追加(マークで比較)
+			if (cardmark1.equals("スペード")) {
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			} else if (cardmark2.equals("スペード")) {
+				System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+			} else if (cardmark1.equals("ハート")) {
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			} else if (cardmark2.equals("ハート")) {
+				System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+			} else if (cardmark1.equals("ダイヤ")) {
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			} else if (cardmark2.equals("ダイヤ")) {
+				System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+			} else {
+				System.out.println("引き分け");
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			}
 		}
 	}
 

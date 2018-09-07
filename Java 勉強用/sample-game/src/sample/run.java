@@ -6,23 +6,44 @@ public class run {
 		Deck deck = new Deck();
 		// deck.printcards();
 
-		// for (int i = 0; i < 2; i++) {
-		// Card card = deck.draw();
+		// カードを2枚引いて強いカードを表示
+		Card drawcard1 = deck.draw();
+		Card drawcard2 = deck.draw();
 
-		// if (card == null) {
-		// System.out.println("デッキにカードがありません");
-		// } else {
-		// outputNumber(card);
-		// outputMark(card);
-		// }
-		// }
+		String cardmark1 = drawcard1.getMark();
+		String cardmark2 = drawcard2.getMark();
 
-		// スペードの8をデッキに置いてデッキからカードを1枚引く
-		// Card card = new Card(8, "スペード");
-		// deck.PutDraw(card);
+		// 引いたカードの確認
+		run.outputNumber(drawcard1);
+		run.outputMark(drawcard1);
+		run.outputNumber(drawcard2);
+		run.outputMark(drawcard2);
 
-		deck.StrongCard();
-
+		// 強い方のカードを表示
+		System.out.println("------------------------------");
+		System.out.println("強い方のカード");
+		if (drawcard1.compare(drawcard2) > 0) {
+			System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+		} else if (drawcard1.compare(drawcard2) < 0) {
+			System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+		} else {
+			if (cardmark1.equals("スペード")) {
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			} else if (cardmark2.equals("スペード")) {
+				System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+			} else if (cardmark1.equals("ハート")) {
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			} else if (cardmark2.equals("ハート")) {
+				System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+			} else if (cardmark1.equals("ダイヤ")) {
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			} else if (cardmark2.equals("ダイヤ")) {
+				System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
+			} else {
+				System.out.println("引き分け");
+				System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
+			}
+		}
 	}
 
 	// 出力処理(数字)
