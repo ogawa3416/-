@@ -74,6 +74,8 @@ public class Deck {
 		String cardmark1 = drawcard1.getMark();
 		String cardmark2 = drawcard2.getMark();
 
+		int compareNumber = drawcard1.compare(cardnumber2);
+
 		// 引いたカードの確認
 		run.outputNumber(drawcard1);
 		run.outputMark(drawcard1);
@@ -83,9 +85,9 @@ public class Deck {
 		// 強い方のカードを表示
 		System.out.println("------------------------------");
 		System.out.println("強い方のカード");
-		if (Integer.compare(cardnumber1, cardnumber2) > 0) {
+		if (compareNumber == 1) {
 			System.out.println("マーク:" + drawcard1.getMark() + " 数字:" + drawcard1.getNumber());
-		} else if (Integer.compare(cardnumber1, cardnumber2) < 0) {
+		} else if (compareNumber == -1) {
 			System.out.println("マーク:" + drawcard2.getMark() + " 数字:" + drawcard2.getNumber());
 		} else {
 			if (cardmark1.equals("スペード")) {

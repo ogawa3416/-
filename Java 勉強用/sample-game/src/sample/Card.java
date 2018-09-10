@@ -56,9 +56,9 @@ public class Card {
 	}
 
 	// 受け取ったCardの数字との比較
-	public int compare(Card anotherCard) {
+	public int compare(int cardnumber) {
 		int cardNumber1 = getintNumber();
-		int cardNumber2 = anotherCard.getintNumber();
+		int cardNumber2 = cardnumber;
 		int compareNumber = Integer.compare(cardNumber1, cardNumber2);
 		return compareNumber;
 	}
