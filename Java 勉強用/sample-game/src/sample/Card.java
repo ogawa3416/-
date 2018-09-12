@@ -2,20 +2,21 @@ package sample;
 
 public class Card {
 
-	private String mark;
 	private int number;
+	private String mark;
 
-	public Card(String mark, int number) {
-		this.mark = mark;
+	public Card(int number, String mark) {
 		this.number = number;
+		this.mark = mark;
 	}
 
 	public boolean isJoker() {
 		return (this.number == 14);
 	}
 
-	public static Card createJoker() {
-		return new Card("ジョーカー", 14);
+	public static Card getJoker() {
+		Card joker = new Card(14, "ジョーカー");
+		return joker;
 	}
 
 	// public static Card getJoker() {
@@ -54,54 +55,12 @@ public class Card {
 		return mark;
 	}
 
-	public String getMarkAndNumber() {
-		String str;
-		if (this.isJoker()) {
-			str = getMark();
-		} else {
-			str = getMark() + "の" + getNumber();
-		}
-		return str;
-	}
-
 	// 受け取ったCardの数字との比較
-	public int compare(Card card) {
-		int compare;
-
-		if (this.mark.equals("ジョーカー")) {
-			if (card.mark.equals("ジョーカー")) {
-				compare = 0;
-			} else {
-				compare = -1;
-			}
-		} else if (card.mark.equals("ジョーカー")) {
-			compare = -1;
-		} else {
-			int n1 = this.number;
-			int n2 = card.number;
-			if (n1 > n2) {
-				compare = -1;
-			} else if (n1 < n2) {
-				compare = 1;
-			} else {
-				// 同値の場合マークで判定
-				if (this.mark.equals("スペード")) {
-					compare = -1;
-				} else if (card.mark.equals("スペード")) {
-					compare = 1;
-				} else if (this.mark.equals("ハート")) {
-					compare = -1;
-				} else if (card.mark.equals("ハート")) {
-					compare = 1;
-				} else if (this.mark.equals("ダイヤ")) {
-					compare = -1;
-				} else if (card.mark.equals("ダイヤ")) {
-					compare = 1;
-				} else {
-					compare = 0;
-				}
-			}
-		}
-		return compare;
+	public int compare(int cardnumber) {
+		int cardNumber1 = getintNumber();
+		int cardNumber2 = cardnumber;
+		int compareNumber = Integer.compare(cardNumber1, cardNumber2);
+		return compareNumber;
 	}
+
 }
