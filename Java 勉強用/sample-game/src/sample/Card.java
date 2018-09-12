@@ -5,9 +5,9 @@ public class Card {
 	private int number;
 	private String mark;
 
-	public Card(int number, String mark) {
-		this.number = number;
+	public Card(String mark, int number) {
 		this.mark = mark;
+		this.number = number;
 	}
 
 	public boolean isJoker() {
@@ -15,14 +15,9 @@ public class Card {
 	}
 
 	public static Card getJoker() {
-		Card joker = new Card(14, "ジョーカー");
+		Card joker = new Card("ジョーカー", 14);
 		return joker;
 	}
-
-	// public static Card getJoker() {
-	// Card joker = new Card(14, "ジョーカー");
-	// return joker;
-	// }
 
 	public String getNumber() {
 		String n;
@@ -40,10 +35,12 @@ public class Card {
 		case 14:
 			n = "ジョーカー";
 			break;
+		case 1:
+			n = "エース";
+			break;
 		default:
 			n = String.valueOf(number);
 		}
-
 		return n;
 	}
 
@@ -55,11 +52,57 @@ public class Card {
 		return mark;
 	}
 
+	public String getMarkAndNumber() {
+		String str;
+		if (this.isJoker()) {
+			str = getMark();
+		} else {
+			str = getMark() + "の" + getNumber();
+		}
+		return str;
+	}
+
 	// 受け取ったCardの数字との比較
-	public int compare(int cardnumber) {
-		int cardNumber1 = getintNumber();
-		int cardNumber2 = cardnumber;
-		int compareNumber = Integer.compare(cardNumber1, cardNumber2);
+	public int compare(Card card) {
+		Integer cardNumber1 = getintNumber();
+		Integer cardNumber2 = card.getintNumber();
+		// Aの場合13を増やす
+		if (cardNumber1 == 1) {
+			cardNumber1 += 13;
+		}
+		if (cardNumber2 == 1) {
+			cardNumber1 += 13;
+		}
+
+		String cardmark1 = getMark();
+		String cardmark2 = card.getMark();
+		int compareNumber = cardNumber1.compareTo(cardNumber2);
+
+		// 数字が同じだった場合マークで判定
+		if (compareNumber == 0) {
+			if (cardmark1.equals("ジョーカー")) {
+				if (cardmark2.equals("ジョーカー")) {
+					compareNumber = 0;
+				} else {
+					compareNumber = -1;
+				}
+			} else if (cardmark1.equals("スペード")) {
+				compareNumber = 1;
+			} else if (cardmark2.equals("スペード")) {
+				compareNumber = -1;
+			} else if (cardmark1.equals("ハート")) {
+				compareNumber = 1;
+			} else if (cardmark2.equals("ハート")) {
+				compareNumber = -1;
+			} else if (cardmark1.equals("ダイヤ")) {
+				compareNumber = 1;
+			} else if (cardmark2.equals("ダイヤ")) {
+				compareNumber = -1;
+			} else {
+				compareNumber = 0;
+			}
+		}
+
 		return compareNumber;
 	}
 

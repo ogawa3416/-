@@ -12,7 +12,7 @@ class runtest {
 	@Test
 	void test0() {
 		// Cardを作成して表示
-		Card card = new Card(8, "スペード");
+		Card card = new Card("スペード", 8);
 		run.outputNumber(card);
 		run.outputMark(card);
 
@@ -34,7 +34,7 @@ class runtest {
 		Deck deck = new Deck();
 
 		// スペードの8をデッキに置いてデッキからカードを1枚引く
-		Card card = new Card(8, "スペード");
+		Card card = new Card("スペード", 8);
 		deck.put(card);
 
 		Card nextCard = deck.draw();
