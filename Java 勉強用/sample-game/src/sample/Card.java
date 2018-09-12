@@ -71,7 +71,7 @@ public class Card {
 			cardNumber1 += 13;
 		}
 		if (cardNumber2 == 1) {
-			cardNumber1 += 13;
+			cardNumber2 += 13;
 		}
 
 		String cardmark1 = getMark();
