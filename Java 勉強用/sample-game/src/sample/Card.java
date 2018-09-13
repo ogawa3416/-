@@ -62,11 +62,11 @@ public class Card {
 		return str;
 	}
 
-	// 受け取ったCardの数字との比較
+	// 受け取ったカードと強さを比較
 	public int compare(Card card) {
 		Integer cardNumber1 = getintNumber();
 		Integer cardNumber2 = card.getintNumber();
-		// Aの場合13を増やす
+		// マークがエースの場合13を加算
 		if (cardNumber1 == 1) {
 			cardNumber1 += 13;
 		}
@@ -86,6 +86,8 @@ public class Card {
 				} else {
 					compareNumber = -1;
 				}
+			} else if (cardmark2.equals("ジョーカー")) {
+				compareNumber = 1;
 			} else if (cardmark1.equals("スペード")) {
 				compareNumber = 1;
 			} else if (cardmark2.equals("スペード")) {
@@ -104,6 +106,38 @@ public class Card {
 		}
 
 		return compareNumber;
+	}
+
+	// カード5枚の比較(作成中)
+	public int compare2(Card card1, Card card2, Card card3, Card card4) {
+
+		int[] Numbers = new int[4];
+		Numbers[0] = getintNumber();
+		Numbers[1] = card1.getintNumber();
+		Numbers[2] = card2.getintNumber();
+		Numbers[3] = card3.getintNumber();
+		Numbers[4] = card4.getintNumber();
+
+		// マークがジョーカーの場合1を加算(15扱い)
+		for (int i = 0; i < 5; i++) {
+			if (Numbers[i] == 14)
+				Numbers[i] += 1;
+		}
+
+		// マークがエースの場合13を加算(14扱い)
+		for (int i = 0; i < 5; i++) {
+			if (Numbers[i] == 1)
+				Numbers[i] += 13;
+		}
+
+		String cardmark1 = getMark();
+		String cardmark2 = card1.getMark();
+		String cardmark3 = card2.getMark();
+		String cardmark4 = card3.getMark();
+		String cardmark5 = card4.getMark();
+
+		return Numbers[0];
+
 	}
 
 }
