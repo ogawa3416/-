@@ -66,7 +66,7 @@ public class run {
 		list.add(drawcard5);
 
 		for (Card c : list) {
-			System.out.println(c.getMark() + "の" + c.getNumber());
+			System.out.println(c.getMarkAndNumber());
 		}
 
 		System.out.println("--------------------------------------");
@@ -74,7 +74,7 @@ public class run {
 		Collections.sort(list, new MyCardComparator());
 
 		for (Card c : list) {
-			System.out.println(c.getMark() + "の" + c.getNumber());
+			System.out.println(c.getMarkAndNumber());
 		}
 
 		Card strongcard = list.get(list.size() - 1);
