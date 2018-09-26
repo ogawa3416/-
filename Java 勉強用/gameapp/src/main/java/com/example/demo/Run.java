@@ -1,9 +1,15 @@
-package sample;
+package com.example.demo;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class run {
+public class Run {
+	public static String output;
+
+	public static void println(String str) {
+		// System.out.println(str);
+		output += str + "<br />\n";
+	}
 
 	public static void main(String[] args) {
 		Deck deck = new Deck();
@@ -11,23 +17,22 @@ public class run {
 		battle2(deck);
 	}
 
-	// 出力処理(数字)
 	public static void outputNumber(Card card) {
 		if (card.isJoker()) {
-			System.out.println("このトランプはジョーカーです");
+			println("このトランプはジョーカーです");
 		} else {
-			System.out.println("このトランプの数字は" + card.getNumber() + "です");
+			println("このトランプの数字は" + card.getNumber() + "です");
 		}
 	}
 
 	// 出力処理(マーク)
 	public static void outputMark(Card card) {
-		System.out.println("そしてマークは" + card.getMark() + "です");
+		println("そしてマークは" + card.getMark() + "です");
 	}
 
 	// 出力処理(マーク+数字)
 	public static void outputMarkAndNumber(Card card) {
-		System.out.println(card.getMarkAndNumber());
+		println(card.getMarkAndNumber());
 	}
 
 	public static void battle(Deck deck) {
@@ -41,11 +46,11 @@ public class run {
 		int compare = drawcard1.compare(drawcard2);
 
 		if (compare > 0) {
-			System.out.println("1枚目の勝ちです。");
+			println("1枚目の勝ちです。");
 		} else if (compare < 0) {
-			System.out.println("2枚目の勝ちです。");
+			println("2枚目の勝ちです。");
 		} else {
-			System.out.println("引き分けです。");
+			println("引き分けです。");
 		}
 
 	}
@@ -66,15 +71,15 @@ public class run {
 		list.add(drawcard5);
 
 		for (Card c : list) {
-			System.out.println(c.getMarkAndNumber());
+			println(c.getMarkAndNumber());
 		}
 
-		System.out.println("--------------------------------------");
+		println("--------------------------------------");
 
 		Collections.sort(list, new MyCardComparator());
 
 		for (Card c : list) {
-			System.out.println(c.getMarkAndNumber());
+			println(c.getMarkAndNumber());
 		}
 
 		Card strongcard = list.get(list.size() - 1);
@@ -84,11 +89,9 @@ public class run {
 		String MarkAndNumber2 = strongcard2.getMarkAndNumber();
 
 		if (mark2.equals("ジョーカー")) {
-			System.out.println("一番強いカードは" + MarkAndNumber + "と" + MarkAndNumber2 + "です");
+			println("一番強いカードは" + MarkAndNumber + "と" + MarkAndNumber2 + "です");
 		} else {
-			System.out.println("一番強いカードは" + MarkAndNumber + "です");
+			println("一番強いカードは" + MarkAndNumber + "です");
 		}
-
 	}
-
 }
