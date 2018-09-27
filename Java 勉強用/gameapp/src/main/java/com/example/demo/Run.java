@@ -4,14 +4,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Run {
-	public static String output;
+	public static String output = "";
+
+	public static String outputResult = "";
 
 	public static void println(String str) {
 		// System.out.println(str);
-		output += str + "<br />\n";
+		output += str + "\n";
 	}
 
-	public static void main(String[] args) {
+	public static void printlnResult(String str) {
+		// System.out.println(str);
+		outputResult += str;
+	}
+
+	// public static void main(String[] args) {
+	// Deck deck = new Deck();
+	// deck.printcards();
+	// battle2(deck);
+	// }
+
+	public static void run() {
 		Deck deck = new Deck();
 		// deck.printcards();
 		battle2(deck);
@@ -74,13 +87,12 @@ public class Run {
 			println(c.getMarkAndNumber());
 		}
 
-		println("--------------------------------------");
-
 		Collections.sort(list, new MyCardComparator());
 
-		for (Card c : list) {
-			println(c.getMarkAndNumber());
-		}
+		// ソート後のカードの表示
+		// for (Card c : list) {
+		// println(c.getMarkAndNumber());
+		// }
 
 		Card strongcard = list.get(list.size() - 1);
 		String MarkAndNumber = strongcard.getMarkAndNumber();
@@ -89,9 +101,9 @@ public class Run {
 		String MarkAndNumber2 = strongcard2.getMarkAndNumber();
 
 		if (mark2.equals("ジョーカー")) {
-			println("一番強いカードは" + MarkAndNumber + "と" + MarkAndNumber2 + "です");
+			printlnResult("一番強いカードは" + MarkAndNumber + "と" + MarkAndNumber2 + "です");
 		} else {
-			println("一番強いカードは" + MarkAndNumber + "です");
+			printlnResult("一番強いカードは" + MarkAndNumber + "です");
 		}
 	}
 }
