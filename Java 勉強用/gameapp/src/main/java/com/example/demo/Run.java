@@ -1,21 +1,16 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class Run {
 	public static String output = "";
 
-	public static String outputResult = "";
-
 	public static void println(String str) {
 		// System.out.println(str);
-		output += str + "\n";
-	}
-
-	public static void printlnResult(String str) {
-		// System.out.println(str);
-		outputResult += str;
+		output += str + ",";
 	}
 
 	// public static void main(String[] args) {
@@ -24,10 +19,12 @@ public class Run {
 	// battle2(deck);
 	// }
 
-	public static void run() {
+	public static List<String> run() {
 		Deck deck = new Deck();
 		// deck.printcards();
 		battle2(deck);
+		List<String> result = Arrays.asList(output.split(","));
+		return result;
 	}
 
 	public static void outputNumber(Card card) {
@@ -101,9 +98,9 @@ public class Run {
 		String MarkAndNumber2 = strongcard2.getMarkAndNumber();
 
 		if (mark2.equals("ジョーカー")) {
-			printlnResult("一番強いカードは" + MarkAndNumber + "と" + MarkAndNumber2 + "です");
+			println("一番強いカードは" + MarkAndNumber + "と" + MarkAndNumber2 + "です");
 		} else {
-			printlnResult("一番強いカードは" + MarkAndNumber + "です");
+			println("一番強いカードは" + MarkAndNumber + "です");
 		}
 	}
 }
