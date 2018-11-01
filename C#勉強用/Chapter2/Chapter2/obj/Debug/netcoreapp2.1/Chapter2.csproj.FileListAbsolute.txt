@@ -1,0 +1,11 @@
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\bin\Debug\netcoreapp2.1\Chapter2.deps.json
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\bin\Debug\netcoreapp2.1\Chapter2.runtimeconfig.json
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\bin\Debug\netcoreapp2.1\Chapter2.runtimeconfig.dev.json
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\bin\Debug\netcoreapp2.1\Chapter2.dll
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\bin\Debug\netcoreapp2.1\Chapter2.pdb
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\obj\Debug\netcoreapp2.1\Chapter2.csprojAssemblyReference.cache
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\obj\Debug\netcoreapp2.1\Chapter2.csproj.CoreCompileInputs.cache
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\obj\Debug\netcoreapp2.1\Chapter2.AssemblyInfoInputs.cache
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\obj\Debug\netcoreapp2.1\Chapter2.AssemblyInfo.cs
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\obj\Debug\netcoreapp2.1\Chapter2.dll
+C:\Users\Kohei Ogawa\source\repos\Chapter2\Chapter2\obj\Debug\netcoreapp2.1\Chapter2.pdb
