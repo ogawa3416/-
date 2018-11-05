@@ -1,0 +1,10 @@
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\bin\Debug\netcoreapp2.1\Chapter2-practice3.deps.json
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\bin\Debug\netcoreapp2.1\Chapter2-practice3.runtimeconfig.json
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\bin\Debug\netcoreapp2.1\Chapter2-practice3.runtimeconfig.dev.json
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\bin\Debug\netcoreapp2.1\Chapter2-practice3.dll
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\bin\Debug\netcoreapp2.1\Chapter2-practice3.pdb
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\obj\Debug\netcoreapp2.1\Chapter2-practice3.csproj.CoreCompileInputs.cache
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\obj\Debug\netcoreapp2.1\Chapter2-practice3.AssemblyInfoInputs.cache
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\obj\Debug\netcoreapp2.1\Chapter2-practice3.AssemblyInfo.cs
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\obj\Debug\netcoreapp2.1\Chapter2-practice3.dll
+C:\Users\Kohei Ogawa\source\repos\Chapter2-practice3\Chapter2-practice3\obj\Debug\netcoreapp2.1\Chapter2-practice3.pdb
