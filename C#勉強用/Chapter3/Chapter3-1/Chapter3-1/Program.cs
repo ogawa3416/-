@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Chapter3_1
 {
@@ -7,11 +8,14 @@ namespace Chapter3_1
     {
         static void Main(string[] args)
         {
-            var list = new List<string>
+            var names = new List<string>
             {
                 "Tokyo","New Delhi","Bangkok","London","Paris","Berlin","Canberra","Hong Kong",
             };
-            list.ForEach(s => Console.WriteLine(s));
+
+            var query = names.Select(s => s.Length);
+            foreach (var n in query)
+                Console.WriteLine("{0}",n);
         }
     }
 }
