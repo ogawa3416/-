@@ -1,0 +1,11 @@
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\bin\Debug\netcoreapp2.1\Chapter4-practice2.deps.json
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\bin\Debug\netcoreapp2.1\Chapter4-practice2.runtimeconfig.json
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\bin\Debug\netcoreapp2.1\Chapter4-practice2.runtimeconfig.dev.json
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\bin\Debug\netcoreapp2.1\Chapter4-practice2.dll
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\bin\Debug\netcoreapp2.1\Chapter4-practice2.pdb
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\obj\Debug\netcoreapp2.1\Chapter4-practice2.csprojAssemblyReference.cache
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\obj\Debug\netcoreapp2.1\Chapter4-practice2.csproj.CoreCompileInputs.cache
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\obj\Debug\netcoreapp2.1\Chapter4-practice2.AssemblyInfoInputs.cache
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\obj\Debug\netcoreapp2.1\Chapter4-practice2.AssemblyInfo.cs
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\obj\Debug\netcoreapp2.1\Chapter4-practice2.dll
+C:\Users\Kohei Ogawa\Documents\GitHub\Sample-code\C#勉強用\Chapter4\Chapter4-practice2\Chapter4-practice2\obj\Debug\netcoreapp2.1\Chapter4-practice2.pdb
